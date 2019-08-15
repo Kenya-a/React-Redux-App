@@ -11,11 +11,13 @@ export const enterButton = () => {
         axios.get(`https://api.jikan.moe/v3/search/anime?q=tokyo%20ghoul&limit=2`)
 
             .then(response => {
-                console.log(response)
+                console.log(response.data.results)
+                //dispatch({ type: FETCH_ANIME_DATA_SUCCESS, payload: response.data.results})
             })
 
             .catch(error => {
                 console.log('Error', error)
+                dispatch({ type: FETCH_ANIME_DATA_FAILURE, payload: error.response})
             })
     }
 }

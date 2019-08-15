@@ -14,7 +14,7 @@ const AnimeList = props => {
         <p>{props.test}</p>
         <button onClick={props.enterButton}>{props.isLoading ? (<Eclipse/>) : ('入る')}</button>
 
-        
+        {props.anime && props.anime.map(e => <Anime key = {e.title} el = {e} />)}
        
         </>
     )
