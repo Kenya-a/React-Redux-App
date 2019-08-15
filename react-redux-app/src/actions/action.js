@@ -12,7 +12,7 @@ export const enterButton = () => {
 
             .then(response => {
                 console.log(response.data.results)
-                //dispatch({ type: FETCH_ANIME_DATA_SUCCESS, payload: response.data.results})
+                dispatch({ type: FETCH_ANIME_DATA_SUCCESS, payload: response.data.results})
             })
 
             .catch(error => {

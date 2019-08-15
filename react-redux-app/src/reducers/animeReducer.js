@@ -25,7 +25,8 @@ export const reducer = (state = initialState, action) => {
             return {
             ...state,
             isLoading: false,
-            error:''
+            error:'',
+            anime: action.payload
             };
     
         case FETCH_ANIME_DATA_FAILURE:

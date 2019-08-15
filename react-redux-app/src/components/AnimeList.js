@@ -24,7 +24,7 @@ const mapStateToProps = state => {
     return {
         test: state.test,
         isLoading: state.isLoading,
-        // anime: state:anime
+        anime: state.anime
     }
 }
 
