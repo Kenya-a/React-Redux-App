@@ -4,7 +4,7 @@ import { enterButton } from '../actions/action'
 
 import Anime from './Anime'
 
-import { Eclipse } from 'react-loading-io'
+// import { Eclipse } from 'react-loading-io'
 
 
 const AnimeList = props => {
@@ -12,7 +12,7 @@ const AnimeList = props => {
         <>
         <h1>ようこそ</h1>
         <p>{props.test}</p>
-        <button onClick={props.enterButton}>{props.isLoading ? (<Eclipse/>) : ('入る')}</button>
+        <button onClick={props.enterButton}>{props.isLoading ? ('loading') : ('入る')}</button>
 
         {props.anime && props.anime.map(e => <Anime key = {e.title} el = {e} />)}
        
