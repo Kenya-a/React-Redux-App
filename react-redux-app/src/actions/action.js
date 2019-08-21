@@ -8,7 +8,7 @@ export const enterButton = () => {
     return dispatch => {
         dispatch({ type: FETCH_ANIME_DATA_START});
 
-        axios.get(`https://api.jikan.moe/v3/search/anime?q=tokyo%20ghoul&limit=2`)
+        axios.get(`https://api.jikan.moe/v3/search/anime?q=tokyo%20ghoul&limit=4`)
 
             .then(response => {
                 console.log(response.data.results)
